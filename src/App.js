@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './App.css';
 
+import Titulo from "./components/Titulo";
+import Boton from "./components/Boton";
+
 function App() {
 
   const [counter, setCounter] = useState(10)
@@ -8,7 +11,13 @@ function App() {
   console.log('HOLA MUNDO')
 
   function incrementar(e) {
-    setCounter(counter + 1)
+    const newCounter = counter + 1
+    setCounter(newCounter)
+  }
+
+  function decrementar(e) {
+    const newCounter = counter - 1
+    setCounter(newCounter)
   }
 
 
@@ -17,20 +26,26 @@ function App() {
 
       <div className="text-center" style={{ marginTop: '10%', }}>
 
-        <h1 className="text-center">{counter}</h1>
+        <Titulo texto={counter} />
 
-        <button className="btn btn-info"
-          onClick={e => incrementar(e)}
-        >
-          Incremenetar
-        </button>
+        <div className="row justify-content-center">
+          <div className="col-6">
+            <Boton texto="Incrementar" funcion={incrementar} />
+          </div>
 
+          <div className="col-6">
+            <Boton className="col-6" texto="Decrementar" funcion={decrementar} />
+          </div>
+
+
+        </div>
 
       </div>
-
-
     </>
   );
 }
+
+
+
 
 export default App;
