@@ -25,8 +25,9 @@ import { ToastModule } from "primeng/toast";
 import { PanelModule } from "primeng/panel";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
+import { RegistroComponent } from './pages/registro/registro.component';
 
-@NgModule({
+@ NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
@@ -35,7 +36,8 @@ import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
     ActividadesComponent,
     AvisosComponent,
     MiperfilComponent,
-    MultimediaComponent
+    MultimediaComponent,
+    RegistroComponent
   ],
   imports: [
     BrowserModule,
