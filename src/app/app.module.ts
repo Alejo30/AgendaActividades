@@ -25,6 +25,8 @@ import { ToastModule } from "primeng/toast";
 import { PanelModule } from "primeng/panel";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
+import { ActividadesFormComponent } from "./pages/actividades/actividadesForm.component";
+import { TableModule } from "primeng/table";
 
 @NgModule({
   declarations: [
@@ -35,7 +37,8 @@ import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
     ActividadesComponent,
     AvisosComponent,
     MiperfilComponent,
-    MultimediaComponent
+    MultimediaComponent,
+    ActividadesFormComponent
   ],
   imports: [
     BrowserModule,
@@ -53,7 +56,8 @@ import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
     TabViewModule,
     CodeHighlighterModule,
     MenubarModule,
-    MessageModule
+    MessageModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

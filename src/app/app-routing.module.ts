@@ -5,11 +5,24 @@ import { InicioComponent } from "./pages/inicio/inicio.component";
 import { ActividadesComponent } from "./pages/actividades/actividades.component";
 import { AvisosComponent } from "./pages/avisos/avisos.component";
 import { MiperfilComponent } from "./pages/miperfil/miperfil.component";
+import { ActividadesFormComponent } from "./pages/actividades/actividadesForm.component";
 
 const routes: Routes = [
   { path: "", component: LoginComponent, pathMatch: "full" },
   { path: "inicio", component: InicioComponent, pathMatch: "full" },
   { path: "actividades", component: ActividadesComponent, pathMatch: "full" },
+  {
+    //SIRVE PARA EDITAR Y ELIMINAR
+    path: "actividades/:action/:id?",
+    component: ActividadesFormComponent,
+    pathMatch: "full"
+  },
+  {
+    //SIRVE SOLO PARA CREAR
+    path: "actividades/:action",
+    component: ActividadesFormComponent,
+    pathMatch: "full"
+  },
   { path: "avisos", component: AvisosComponent, pathMatch: "full" },
   { path: "miperfil", component: MiperfilComponent, pathMatch: "full" }
 ];
