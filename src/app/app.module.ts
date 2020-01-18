@@ -26,6 +26,8 @@ import { PanelModule } from "primeng/panel";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
 import { RegistroComponent } from './pages/registro/registro.component';
+import { ActividadesFormComponent } from "./pages/actividades/actividadesForm.component";
+import { TableModule } from "primeng/table";
 
 @ NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
     AvisosComponent,
     MiperfilComponent,
     MultimediaComponent,
-    RegistroComponent
+    RegistroComponent,
+    ActividadesFormComponent
   ],
   imports: [
     BrowserModule,
@@ -55,7 +58,8 @@ import { RegistroComponent } from './pages/registro/registro.component';
     TabViewModule,
     CodeHighlighterModule,
     MenubarModule,
-    MessageModule
+    MessageModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]

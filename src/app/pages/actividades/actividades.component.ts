@@ -1,15 +1,15 @@
 import { Component, OnInit } from "@angular/core";
+import { ActividadesService } from "./actividades.service";
 
 @Component({
   selector: "app-actividades",
-  templateUrl: "./actividades.component.html",
-
-  styleUrls: ["./actividades.component.css"]
+  templateUrl: "./actividades.component.html"
 })
 export class ActividadesComponent implements OnInit {
-  public textoEditor = "";
-
+  public actividades = [];
   constructor() {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    //this.actividades = this.srv.getActividades();
+  }
 }

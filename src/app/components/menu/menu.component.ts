@@ -1,5 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { MenuItem } from "primeng/api";
+import { Router } from "@angular/router";
 @Component({
   selector: "app-menu",
   templateUrl: "./menu.component.html",
@@ -8,7 +9,7 @@ import { MenuItem } from "primeng/api";
 export class MenuComponent implements OnInit {
   public items: MenuItem[];
 
-  constructor() {}
+  constructor(private router: Router) {}
 
   ngOnInit() {
     this.items = [
@@ -17,15 +18,13 @@ export class MenuComponent implements OnInit {
         items: [
           {
             label: "Nueva Actividad",
-            icon: "pi pi-fw pi-plus"
-          },
-          {
-            label: "Editar Actividad",
-            icon: "pi pi-fw pi-pencil"
+            icon: "pi pi-fw pi-plus",
+            command: () => this.router.navigate(["/actividades/add"])
           },
           {
             label: "Lista de Actividades",
-            icon: "pi pi-fw pi-bars"
+            icon: "pi pi-fw pi-bars",
+            command: () => this.router.navigate(["/actividades"])
           }
         ]
       },
@@ -35,10 +34,6 @@ export class MenuComponent implements OnInit {
           {
             label: "Nuevo Aviso",
             icon: "pi pi-fw pi-plus"
-          },
-          {
-            label: "Editar Aviso",
-            icon: "pi pi-fw pi-pencil"
           },
           {
             label: "Lista de Avisos",

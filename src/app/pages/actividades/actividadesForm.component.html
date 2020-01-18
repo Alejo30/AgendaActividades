@@ -1,0 +1,58 @@
+<div class="container" [ngStyle]="{'margin-top': '10%'}">
+    <div class="row justify-content-center border border-dark">
+        <div class="col-12">
+            <h1 class="text-center display-4" *ngIf="action === 'add'">Crear Actividad</h1>
+            <h1 class="text-center display-4" *ngIf="action === 'edit'">Editar Actividad</h1>
+            <h1 class="text-center display-4" *ngIf="action === 'del'">Eliminar Actividad</h1>
+            <form #form="ngForm" class="my-5">
+                <div class=" form-row justify-content-center">
+
+                    <div class="form-group col-lg-10">
+                        <label>Título *:</label>
+                        <input class="w-100" pInputText type="text" placeholder="Required" [(ngModel)]="actividad.titulo" name="titulo" />
+                    </div>
+                    <!--DIV TITUTLO-->
+
+
+                    <div class="form-group col-lg-10">
+                        <label>Descripción *:</label>
+                        <textarea class="w-100" pInputTextarea type="text" [(ngModel)]="actividad.descripcion" name="descripcion"></textarea>
+                    </div>
+                    <!--DIV DESCRIPCIÓN-->
+
+
+                    <div class="form-group col-lg-10">
+                        <label>Añadir Evidencia *:</label>
+                        <p-editor [(ngModel)]="actividad.evidencia" name="editor" [style]="{'height':'320px'}">
+                        </p-editor>
+                    </div>
+                    <!--DIV EDITOR-->
+
+                </div>
+
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4">
+
+                        <button *ngIf="action === 'add'" class="btn btn-primary btn-block" (click)="nueva()">
+                            Crear Nueva
+                        </button>
+
+                        <button *ngIf="action === 'edit'" class="btn btn-primary btn-block" (click)="editar()">
+                            Editar Actividad
+                        </button>
+
+                        <button *ngIf="action === 'del'" class="btn btn-primary btn-block" (click)="eliminar()">
+                            Eliminar Actividad
+                        </button>
+
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success btn-block">Cancelar</button>
+                    </div>
+                </div>
+
+
+            </form>
+        </div>
+    </div>
+</div>
