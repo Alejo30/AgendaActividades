@@ -56,7 +56,6 @@ import { ActividadesFormComponent } from './pages/actividades/actividadesForm.co
     CodeHighlighterModule,
     MenubarModule,
     MessageModule,
-    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
