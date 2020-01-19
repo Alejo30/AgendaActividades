@@ -26,6 +26,7 @@ import { PanelModule } from "primeng/panel";
 import { InputTextareaModule } from "primeng/inputtextarea";
 import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
 import { ActividadesFormComponent } from './pages/actividades/actividadesForm.component';
+import { TableModule } from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { ActividadesFormComponent } from './pages/actividades/actividadesForm.co
     CodeHighlighterModule,
     MenubarModule,
     MessageModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
