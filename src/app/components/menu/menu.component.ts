@@ -45,7 +45,8 @@ export class MenuComponent implements OnInit {
         label: "Videos"
       },
       {
-        label: "Mi Perfil"
+        label: "Mi Perfil",
+        command: () => this.router.navigate(["miperfil"])
       }
     ];
   }

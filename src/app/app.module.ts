@@ -27,6 +27,10 @@ import { InputTextareaModule } from "primeng/inputtextarea";
 import { MultimediaComponent } from "./pages/multimedia/multimedia.component";
 import { ActividadesFormComponent } from "./pages/actividades/actividadesForm.component";
 import { TableModule } from "primeng/table";
+import { RegistrarFormComponent } from "./pages/registrar-form/registrar-form.component";
+
+import { HttpClientModule } from "@angular/common/http";
+import { GraphQLModule } from './graphql.module';
 
 @NgModule({
   declarations: [
@@ -38,7 +42,8 @@ import { TableModule } from "primeng/table";
     AvisosComponent,
     MiperfilComponent,
     MultimediaComponent,
-    ActividadesFormComponent
+    ActividadesFormComponent,
+    RegistrarFormComponent
   ],
   imports: [
     BrowserModule,
@@ -57,7 +62,11 @@ import { TableModule } from "primeng/table";
     CodeHighlighterModule,
     MenubarModule,
     MessageModule,
-    TableModule
+    TableModule,
+
+    HttpClientModule,
+
+    GraphQLModule
   ],
   providers: [],
   bootstrap: [AppComponent]

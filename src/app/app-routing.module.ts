@@ -6,11 +6,14 @@ import { ActividadesComponent } from "./pages/actividades/actividades.component"
 import { AvisosComponent } from "./pages/avisos/avisos.component";
 import { MiperfilComponent } from "./pages/miperfil/miperfil.component";
 import { ActividadesFormComponent } from "./pages/actividades/actividadesForm.component";
+import { RegistrarFormComponent } from "./pages/registrar-form/registrar-form.component";
 
 const routes: Routes = [
   { path: "", component: LoginComponent, pathMatch: "full" },
+  { path: "login/:status", component: LoginComponent, pathMatch: "full" },
   { path: "inicio", component: InicioComponent, pathMatch: "full" },
   { path: "actividades", component: ActividadesComponent, pathMatch: "full" },
+  { path: "registrar", component: RegistrarFormComponent, pathMatch: "full" },
   {
     //SIRVE PARA EDITAR Y ELIMINAR
     path: "actividades/:action/:id?",

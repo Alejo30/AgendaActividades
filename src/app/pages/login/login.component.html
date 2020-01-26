@@ -1,5 +1,8 @@
 <div class="container" [ngStyle]="{'margin-top': '10%'}">
 
+    <div *ngIf="status">
+        <h1>SE HA REGISTRADO SATISFACTORIAMENTE POR FAVOR INICIE SESSION</h1>
+    </div>
 
     <div class="row justify-content-center border border-dark">
 
@@ -11,16 +14,16 @@
 
             <h1 class="text-center display-4">Iniciar Sesión</h1>
 
-            <form class="my-5">
+            <form ngForm="form" class="my-5">
 
                 <div class="form-row justify-content-center">
 
                     <div class="form-group col-12">
                         <div class="ui-inputgroup">
                             <span class="ui-inputgroup-addon">
-                                            <i class="pi pi-user" style="line-height: 1.25;"></i>
-                                            </span>
-                            <input class="w-100" type="text" pInputText placeholder="Username">
+                                <i class="pi pi-user" style="line-height: 1.25;"></i>
+                            </span>
+                            <input class="w-100" type="text" pInputText placeholder="Username" [(ngModel)]="usuario.username" name="username">
                         </div>
 
                     </div>
@@ -28,9 +31,9 @@
                     <div class="form-group col-12">
                         <div class="ui-inputgroup">
                             <span class="ui-inputgroup-addon">
-                                                <i class="pi pi-key" style="line-height: 1.25;"></i>
-                                                </span>
-                            <input class="w-100" type="password" pInputText placeholder="Contraseña">
+                                <i class="pi pi-key" style="line-height: 1.25;"></i>
+                            </span>
+                            <input class="w-100" type="password" pInputText placeholder="Contraseña" [(ngModel)]="usuario.password" name="password">
                         </div>
 
                     </div>
@@ -40,6 +43,9 @@
                         <button class="btn btn-primary btn-block" (click)="login()">Ingresar</button>
                     </div>
 
+                    <div class="col-md-4 text-center">
+                        <a routerLink="/registrar">Registrate</a>
+                    </div>
 
                 </div>
 

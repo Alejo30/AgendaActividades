@@ -1,0 +1,53 @@
+<div class="container" [ngStyle]="{'margin-top': '10%'}">
+    <div class="row justify-content-center border border-dark">
+        <div class="col-12">
+            <h1 class="text-center display-4">¡Crea tu perfil Aquí!</h1>
+            <form class="my-5">
+                <div class=" form-row justify-content-center">
+
+                    <div class="form-group col-lg-10">
+                        <label>Nombres* :</label>
+                        <input class="w-100" pInputText type="text" placeholder="Required" [(ngModel)]="registrar.extra.nombres" name="nombres" />
+                    </div>
+                    <!--DIV NOMBRES-->
+
+                    <div class="form-group col-lg-10">
+                        <label>Apellidos* :</label>
+                        <input class="w-100" pInputText type="text" placeholder="Required" [(ngModel)]="registrar.extra.apellidos" name="apellidos" />
+                    </div>
+                    <!--DIV APELLIDOS-->
+
+                    <div class="form-group col-lg-10">
+                        <label>Usuario* :</label>
+                        <input class="w-100" pInputText type="text" placeholder="Required" [(ngModel)]="registrar.username" name="usuario" />
+                    </div>
+                    <!--DIV USUARIO-->
+
+                    <div class="form-group col-lg-10">
+                        <label>Contraseña* :</label>
+                        <input class="w-100" pInputText type="password" placeholder="Required" [(ngModel)]="registrar.password" name="contrasena" />
+                    </div>
+                    <!--DIV USUARIO-->
+
+                    <div class="form-group col-lg-10">
+                        <label>Nombre de Representado :</label>
+                        <input class="w-100" pInputText type="text" placeholder="Required" [(ngModel)]="registrar.extra.representado" name="representado" />
+                    </div>
+                    <!--DIV REPRESENTADO-->
+
+
+                </div>
+
+                <div class="form-row justify-content-center">
+                    <div class="col-md-4">
+                        <button class="btn btn-primary btn-block " (click)="nueva()">Guardar</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-success btn-block">Cancelar</button>
+                    </div>
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
