@@ -32,6 +32,10 @@ import { RegistrarFormComponent } from "./pages/registrar-form/registrar-form.co
 import { HttpClientModule } from "@angular/common/http";
 import { GraphQLModule } from './graphql.module';
 
+import { ActividadesFormComponent } from './pages/actividades/actividadesForm.component';
+import { TableModule } from 'primeng/table';
+
+
 @NgModule({
   declarations: [
     AppComponent,
